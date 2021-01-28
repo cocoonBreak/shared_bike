@@ -1,0 +1,2 @@
+/home/chenyingjian/share/linux_server/github/shared_bike/src/common/CMakeFiles/common.dir
+/home/chenyingjian/share/linux_server/github/shared_bike/src/CMakeFiles/shared_bike.dir
