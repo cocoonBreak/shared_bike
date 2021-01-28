@@ -15,7 +15,11 @@ INCLUDE_DIRECTORIES(../../third/include)
 
 #将指定目录添加到需要链接的库文件目录之下
 LINK_DIRECTORIES(../../third/lib/iniparser)
+LINK_DIRECTORIES(../../third/lib/log4cpp)
 
 #该指令的作用为将目标文件与库文件进行链接
 TARGET_LINK_LIBRARIES(common iniparser)
+TARGET_LINK_LIBRARIES(common log4cpp)
+#TARGET_LINK_LIBRARIES(common liblog4cpp.a)
+TARGET_LINK_LIBRARIES(common pthread)
 TARGET_LINK_LIBRARIES(common dl)

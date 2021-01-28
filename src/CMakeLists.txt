@@ -9,6 +9,7 @@ INCLUDE_DIRECTORIES(../common)
 
 #将指定目录添加到需要链接的库文件目录之下
 LINK_DIRECTORIES(../third/lib/iniparser)
+LINK_DIRECTORIES(../third/lib/log4cpp)
 LINK_DIRECTORIES(../common)
 
 #搜集所有在指定路径下的源文件的文件名，将输出结果列表储存在指定的变量中
@@ -23,6 +24,9 @@ SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -rdynamic -Wall -g3 -m64 -pipe -std=c++0
 #该指令的作用为将目标文件与库文件进行链接
 TARGET_LINK_LIBRARIES(shared_bike iniparser)
 TARGET_LINK_LIBRARIES(shared_bike common)
+TARGET_LINK_LIBRARIES(shared_bike pthread)
+#TARGET_LINK_LIBRARIES(shared_bike log4cpp)
+TARGET_LINK_LIBRARIES(shared_bike liblog4cpp.a)
 
 #增加子目录
 ADD_SUBDIRECTORY(common)
